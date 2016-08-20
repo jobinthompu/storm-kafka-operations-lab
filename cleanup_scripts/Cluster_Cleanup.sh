@@ -1,7 +1,7 @@
 cd /etc/yum.repos.d/
 wget http://public-repo-1.hortonworks.com/ambari/centos6/2.x/updates/2.2.1.0/ambari.repo
 yum clean all
-yum install -y ambari-server ambari-agent
+yum install -y ambari-server ambari-agent jq
 ambari-server setup -s
 
 ssh -oStrictHostKeyChecking=no namenode "/etc/init.d/supervisord stop"
